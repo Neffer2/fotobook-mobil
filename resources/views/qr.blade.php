@@ -24,7 +24,7 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const path = urlParams.get('image');
-        generateQRCode('http://localhost:8000/storage/photos/' + path);
+        generateQRCode('https://mobil.planvisionarios.com/storage/photos/' + path);
     </script>
 </body>
 </html>
