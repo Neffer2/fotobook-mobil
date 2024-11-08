@@ -9,6 +9,8 @@
 <body>
     <div id="qrcode"></div>
 
+    <a id="download" download href="">Descargar</a>
+
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <script>
         // Generar un código QR con un enlace
@@ -22,9 +24,11 @@
             });
         }
 
+        let download = document.getElementById('download');
         const urlParams = new URLSearchParams(window.location.search);
         const path = urlParams.get('image');
         generateQRCode('https://mobil.planvisionarios.com/storage/photos/' + path);
+        download.href = 'https://mobil.planvisionarios.com/storage/photos/' + path;
     </script>
 </body>
 </html>
