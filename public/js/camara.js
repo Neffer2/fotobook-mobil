@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => {
                 let data = response.data;
                 if (data.code == 200){
-                    // window.location.href = '/qr?image=' + data.image;
+                    window.location.href = '/qr?image=' + data.image;
                 }
             })
             .catch(error => {
                 console.error("Error saving the image: ", error);
             });
-        }, 500);
+        }, 1000);
     });
 
 

@@ -7,7 +7,9 @@
     <title>Camara</title>
 </head>
 <body>
-    <div id="qrcode"></div>
+    <div style="padding: 2rem;">
+        <div id="qrcode"></div>
+    </div>
 
     <a id="download" download href="">Descargar</a>
 
