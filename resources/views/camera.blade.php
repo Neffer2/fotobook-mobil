@@ -10,7 +10,7 @@
     <div class="camara-container" id="camara-container">
         <div class="video-wrapper">
             <video id="video" autoplay></video>
-            <img id="overlay" style="position: absolute; bottom: 0; left: 10%; width: 80%; height: auto;">
+            <img id="overlay" style="position: absolute; bottom: 0; left: 0; width: auto; height: 100%;">
         </div>
         <button id="capture">Capture</button>
         <canvas id="canvas" width="756" height="1344" style="display: none;"></canvas>
