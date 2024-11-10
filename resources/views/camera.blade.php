@@ -20,4 +20,4 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="{{ asset('js/camara.js') }}"></script>
 </body>
-</html>
+</html> 
