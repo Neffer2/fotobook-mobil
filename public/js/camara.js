@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Obtener la imagen capturada como data URL
             const dataURL = canvas.toDataURL('image/png');
             capturedImage.src = dataURL;
-            capturedImage.style.display = 'block';
+            // capturedImage.style.display = 'block';
 
             axios.post('/storePhoto', {
                 image: dataURL
