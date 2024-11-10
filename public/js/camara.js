@@ -23,12 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 video.addEventListener('loadedmetadata', () => {
                     canvas.width = 756;
                     canvas.height = 1345;
-
-                    console.log('Video width: ', video.videoWidth);
-                    console.log('Video height: ', video.videoHeight);
-
-                    overlay.style.width = `${video.videoWidth}px`;
-                    overlay.style.height = `${video.videoHeight + 26}px`;
                 });
             })
             .catch(err => {
