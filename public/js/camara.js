@@ -12,10 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startCamera() {
-        navigator.mediaDevices.getUserMedia({ video: { width: 756, height: 1344 } })
+        navigator.mediaDevices.getUserMedia({ video: { width: 756, height: 1345 } })
             .then(stream => {
                 video.srcObject = stream;
+
                 video.play(); 
+
+                
+                // Ajustar el tamaño del canvas al tamaño del video
+                video.addEventListener('loadedmetadata', () => {
+                    canvas.width = 756;
+                    canvas.height = 1345;
+                });
             })
             .catch(err => {
                 console.error("Error accessing the camera: ", err);
@@ -23,23 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     captureButton.addEventListener('click', () => {
-
         setTimeout(() => {
             const context = canvas.getContext('2d');
+            // Dibujar el video en el canvas
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-            const scale = Math.min(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
-            let x = (canvas.width / 2) - (video.videoWidth / 2) * scale;
-            let y = (canvas.height / 2) - (video.videoHeight / 2) * scale;
-
-            context.drawImage(video, x, y, video.videoWidth * scale, video.videoHeight * scale);
-
-            const overlayWidth = canvas.width * 0.8;
-            const overlayHeight = overlay.naturalHeight * (overlayWidth / overlay.naturalWidth);
-            const overlayX = (canvas.width - overlayWidth) / 2;
-            const overlayY = canvas.height - overlayHeight - 130;
+            // Dibujar la imagen superpuesta en el canvas
+            const overlayWidth = canvas.width;
+            const overlayHeight = canvas.height;
+            const overlayX = 0;
+            const overlayY = 0;
 
             context.drawImage(overlay, overlayX, overlayY, overlayWidth, overlayHeight);
 
+            // Obtener la imagen capturada como data URL
             const dataURL = canvas.toDataURL('image/png');
             capturedImage.src = dataURL;
             capturedImage.style.display = 'block';
