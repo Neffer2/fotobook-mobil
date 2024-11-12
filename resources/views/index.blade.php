@@ -8,7 +8,7 @@
     <title>Mobil</title>
 </head>
 
-<body> 
+<body>
     <div class="menu-container">
         <div class="menu">
             <a href="menu1" class="menu-item">
@@ -30,6 +30,9 @@
                 <img src="{{ asset('assets/menu/max.png') }}" alt="Logo" class="logo">
             </a>
             <a href="menu7" class="menu-item">
+                <img src="{{ asset('assets/menu/cajica.png') }}" alt="Logo" class="logo">
+            </a>
+            <a href="menu8" class="menu-item">
                 <img src="{{ asset('assets/menu/grupo.png') }}" alt="Logo" class="logo">
             </a>
         </div>

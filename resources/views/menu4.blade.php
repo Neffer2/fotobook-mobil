@@ -9,7 +9,9 @@
 <body>
     <div class="menu-container">
         <div class="menu">
-            <a href="/camera?overlay=brad_1.png" class="menu-item" id="tatan1">Brad 1</a>
+            <a href="/camera?overlay=brad_1.png" class="menu-item" id="tatan1">
+                <img src="{{ asset('assets/sub_menu/filtro/brad.png') }}" alt="Logo" class="logo">
+            </a>
         </div>
     </div>
 </body>

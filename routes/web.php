@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-for ($i = 1; $i <= 7; $i++) {
+for ($i = 1; $i <= 8; $i++) {
     Route::get("/menu{$i}", function () use ($i) {
         return view("menu{$i}");
     });

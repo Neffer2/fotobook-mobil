@@ -9,8 +9,12 @@
 <body>
     <div class="menu-container">
         <div class="menu">
-            <a href="/camera?overlay=nefbrad_1.png" class="menu-item" id="tatan1">Tatan 1</a>
-            <a href="/camera?overlay=tatan_2.png" class="menu-item" id="tatan2">Tatan 2</a>
+            <a href="/camera?overlay=nefbrad_1.png" class="menu-item" id="tatan1">
+                <img src="{{ asset('assets/sub_menu/filtro/tatan_1.png') }}" alt="Logo" class="logo">
+            </a>
+            <a href="/camera?overlay=tatan_2.png" class="menu-item" id="tatan2">
+                <img src="{{ asset('assets/sub_menu/filtro/tatan_2.png') }}" alt="Logo" class="logo">
+            </a>
         </div>
     </div>
 </body>

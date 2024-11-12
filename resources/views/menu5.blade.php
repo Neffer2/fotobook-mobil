@@ -9,7 +9,9 @@
 <body>
     <div class="menu-container">
         <div class="menu">
-            <a href="/camera?overlay=nana.png" class="menu-item" id="tatan1">Nana 1</a>
+            <a href="/camera?overlay=nana.png" class="menu-item" id="tatan1">
+                <img src="{{ asset('assets/sub_menu/filtro/nana.png') }}" alt="Logo" class="logo">
+            </a>
         </div>
     </div>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,9 @@
 <body>
     <div class="menu-container">
         <div class="menu">
-            <a href="/camera?overlay=nana.png" class="menu-item" id="tatan1">Nana 1</a>
-            <a href="/camera?overlay=cajica.png" class="menu-item" id="tatan2">Cajica 2</a>
-            <a href="/camera?overlay=grupo.png" class="menu-item" id="tatan3">Grupo</a>
+            <a href="/camera?overlay=cajica.png" class="menu-item" id="tatan1">
+                <img src="{{ asset('assets/sub_menu/filtro/cajica.png') }}" alt="Logo" class="logo">
+            </a>
         </div>
     </div>
 </body>
