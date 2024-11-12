@@ -16,7 +16,7 @@
             <video id="video" autoplay></video>
             <img id="overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;">
         </div>
-        <button id="capture">Capture</button>
+        <button id="capture" class="button-captura">Foto</button>
         <canvas id="canvas" width="756" height="1344" style="display: none;"></canvas>
         <img id="captured-image" style="display: none; margin-top: 20px;">
     </div>
@@ -24,4 +24,4 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="{{ asset('js/camara.js') }}"></script>
 </body>
-</html> 
+</html>

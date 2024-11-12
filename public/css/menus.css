@@ -42,7 +42,7 @@ body {
     -webkit-tap-highlight-color: transparent; /* Eliminar el contorno azul en dispositivos móviles */
 }
 
-.menu-item:nth-child(7) {
+.menu-item:nth-child(8) {
     margin-left: auto;
     margin-right: auto;
 }
@@ -68,6 +68,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.button-captura {
+    width: 100px;
+    height: 100px;
 }
 
 #overlay {
