@@ -12,7 +12,7 @@
         <div class="video-wrapper">
             <video id="video" autoplay></video>
             {{-- <img id="overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;"> --}}
-            <img id="overlay" style="position: absolute; bottom: 29%; left: 0; height: 566px; width: 1080px;">
+            <img id="overlay" style="position: absolute; bottom: 29%; left: 0; height: 566px; width: 100%;">
         </div>
         <canvas id="canvas" width="756" height="1344" style="display: none;"></canvas>
         <img id="captured-image" style="display: none; margin-top: 20px;">
