@@ -31,3 +31,7 @@ body {
     font-size: 1rem;
     color: #fff;
 }
+
+#qrcode img {
+    border: 16px solid #fff;
+}
