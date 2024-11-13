@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startCamera() {
-        navigator.mediaDevices.getUserMedia({ video: { width: 1080, height: 566 } })
+        navigator.mediaDevices.getUserMedia({ video: { width: 1080, height: 1080 } })
             .then(stream => {
                 video.srcObject = stream;
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Ajustar el tamaño del canvas al tamaño del video
                 video.addEventListener('loadedmetadata', () => {
                     canvas.width = 1080;
-                    canvas.height = 566;
+                    canvas.height = 1080;
                 });
             })
             .catch(err => {
