@@ -12,7 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startCamera() {
-        navigator.mediaDevices.getUserMedia({ video: { width: 1080, height: 1080 } })
+        navigator.mediaDevices.getUserMedia({ video: {
+            width: { min: 640, ideal: 1280 },
+            height: { min: 480, ideal: 720 },
+            aspectRatio: 16 / 9
+         } })
             .then(stream => {
                 video.srcObject = stream;
 
