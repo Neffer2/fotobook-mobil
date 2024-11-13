@@ -68,7 +68,7 @@ body {
 #video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .button-captura {
@@ -81,6 +81,7 @@ body {
     border-radius: 50%;
     background-color: #fff;
     border-color: #fff;
+    border-style: solid;
 }
 
 #overlay {
