@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startCamera() {
-        navigator.mediaDevices.getUserMedia({ video: { width: { min: 640, ideal: 1280 },
-        height: { min: 480, ideal: 720 },
-        aspectRatio: 16 / 9 }})
+        navigator.mediaDevices.getUserMedia({ video: { width: 1080, height: 1080 } })
             .then(stream => {
                 video.srcObject = stream;
 
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startCamera();
 
     captureButton.addEventListener('click', () => {
-        let seconds = 6;
+        let seconds = 3;
         let captureInterval = setInterval(() => {
             if (seconds === 1){capture(); clearInterval(captureInterval);}
             seconds--;
