@@ -18,6 +18,9 @@
         <button id="capture" class="button-captura">
             <i class="fa-solid fa-camera fa-2xl"></i>
         </button>
+        <a href="{{ route('home') }}" class="button">
+            <i class="fa-solid fa-house fa-2xl"></i>
+        </a>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

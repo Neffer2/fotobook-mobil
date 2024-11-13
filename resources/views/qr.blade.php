@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/qr.css') }}">
+    <script src="https://kit.fontawesome.com/15bc5276a1.js" crossorigin="anonymous"></script>
     <title>Camara</title>
 </head>
 <body>
@@ -13,8 +14,10 @@
         <a id="download" download href="">
             <h1>&Oacute; descarga tu foto aqu&iacute;</h1>
         </a>
+        <a href="{{ route('home') }}" class="button">
+            <i class="fa-solid fa-house fa-2xl"></i>
+        </a>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <script>

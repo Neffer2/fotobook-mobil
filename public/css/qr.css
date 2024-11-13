@@ -35,3 +35,22 @@ body {
 #qrcode img {
     border: 16px solid #fff;
 }
+
+.button {
+    position: relative;
+    color: #000 !important;
+    font-size: 1.5rem !important;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.button i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -16,7 +16,7 @@ use App\Http\Controllers\FotoController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 for ($i = 1; $i <= 8; $i++) {
     Route::get("/menu{$i}", function () use ($i) {
