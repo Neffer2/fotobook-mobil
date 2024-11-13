@@ -12,17 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startCamera() {
-        navigator.mediaDevices.getUserMedia({ video: { width: 756, height: 1345 } })
+        navigator.mediaDevices.getUserMedia({ video: { width: 1080, height: 566 } })
             .then(stream => {
                 video.srcObject = stream;
 
                 video.play();
 
-
                 // Ajustar el tamaño del canvas al tamaño del video
                 video.addEventListener('loadedmetadata', () => {
-                    canvas.width = 756;
-                    canvas.height = 1345;
+                    canvas.width = 1080;
+                    canvas.height = 566;
                 });
             })
             .catch(err => {

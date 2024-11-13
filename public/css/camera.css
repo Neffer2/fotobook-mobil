@@ -60,7 +60,7 @@ body {
 .video-wrapper {
     position: relative;
     top: 2.5%;
-    width: 756px;
+    width: 100%;
     height: 1345px;
     overflow: hidden;
 }
