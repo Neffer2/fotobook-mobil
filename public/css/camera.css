@@ -51,7 +51,7 @@ body {
 .camara-container {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     height: 100vh;
     position: relative;
