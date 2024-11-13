@@ -30,15 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    startCamera();
+
     captureButton.addEventListener('click', () => {
-        let seconds = 5;
+        let seconds = 6;
         let captureInterval = setInterval(() => {
-            captureButton.innerText = `${seconds}`;
+            if (seconds === 1){capture(); clearInterval(captureInterval);}
             seconds--;
-            if (seconds < 0){
-                clearInterval(captureInterval);
-                capture();
-            }
+            captureButton.innerText = `${seconds}`;
         }, 1000);
     });
 
@@ -74,8 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Error saving the image: ", error);
         });
     }
-
-    startCamera();
 });
 
 // Cristian cajica

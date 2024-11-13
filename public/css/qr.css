@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("../assets/marcos_01_.png");
+    background-repeat: no-repeat;
+}
+
+.title {
+    text-align: center;
+    margin: 2rem 4rem;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.qr-container {
+    height: 1920px;
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.qr-container a {
+    font-size: 1rem;
+    color: #fff;
+}

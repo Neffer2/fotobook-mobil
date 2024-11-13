@@ -6,15 +6,16 @@
 
 body {
     font-family: Arial, sans-serif;
+    background: url("../assets/marcos_02_.png");
+    background-repeat: no-repeat;
 }
 
 .menu-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: end;
+    height: 90vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #000;
 }
 
 .menu {
@@ -27,8 +28,8 @@ body {
 }
 
 .menu-item {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     background-color: #000;
     display: flex;
     justify-content: center;

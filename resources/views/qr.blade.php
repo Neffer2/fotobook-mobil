@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/menus.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/qr.css') }}">
     <title>Camara</title>
 </head>
 <body>
-    <div style="padding: 2rem;">
+    <div class="qr-container">
+        <h1 class="title">Escanea el c&oacute;digo QR y descubre tu foto</h1>
         <div id="qrcode"></div>
+        <a id="download" download href="">
+            <h1>&Oacute; descarga tu foto aqu&iacute;</h1>
+        </a>
     </div>
 
-    <a id="download" download href="">Descargar</a>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <script>
