@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capture();
                 clearInterval(captureInterval);
             }
-            seconds--;
+            // seconds--;
             captureButton.innerText = `!`;
         }, 1000);
     });
