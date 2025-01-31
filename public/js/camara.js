@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(captureInterval);
             }
             seconds--;
-            captureButton.innerText = `${seconds}`;
+            captureButton.innerText = `!`;
         }, 1000);
     });
 
