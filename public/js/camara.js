@@ -12,20 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startCamera() {
-        navigator.mediaDevices.getUserMedia({ video: { width: 1080, height: 1080 } })
+        navigator.mediaDevices.getUserMedia({ video: true })
             .then(stream => {
                 video.srcObject = stream;
-
                 video.play();
 
                 // Ajustar el tamaño del canvas al tamaño del video
                 video.addEventListener('loadedmetadata', () => {
-                    canvas.width = 1080;
-                    canvas.height = 1080;
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
                 });
             })
             .catch(err => {
                 console.error("Error accessing the camera: ", err);
+                alert("Error accessing the camera. Please check your camera settings.");
             });
     }
 
@@ -33,14 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     captureButton.addEventListener('click', () => {
         let seconds = 1;
-        let captureInterval = setInterval(() => {
-            if (seconds === 1){capture(); clearInterval(captureInterval);}
+        const captureInterval = setInterval(() => {
+            if (seconds === 1) {
+                capture();
+                clearInterval(captureInterval);
+            }
             seconds--;
             captureButton.innerText = `${seconds}`;
         }, 1000);
     });
 
-    function capture(){
+    function capture() {
         const context = canvas.getContext('2d');
         // Dibujar el video en el canvas
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -56,26 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Obtener la imagen capturada como data URL
         const dataURL = canvas.toDataURL('image/png');
         capturedImage.src = dataURL;
-        // console.log(dataURL);
-        // capturedImage.style.display = 'block';
 
-        axios.post('/storePhoto', {
-            image: dataURL
-        })
-        .then(response => {
-            let data = response.data;
-            if (data.code == 200){
-                window.location.href = '/qr?image=' + data.image;
-            }
-        })
-        .catch(error => {
-            console.error("Error saving the image: ", error);
-        });
+        axios.post('/storePhoto', { image: dataURL })
+            .then(response => {
+                const data = response.data;
+                if (data.code === 200) {
+                    window.location.href = `/qr?image=${data.image}`;
+                }
+            })
+            .catch(error => {
+                console.error("Error saving the image: ", error);
+                alert("Error saving the image. Please try again.");
+            });
     }
 });
-
-// Cristian cajica
-// Jack Miller
-// Brad Binder
-// Max
-// Nana
