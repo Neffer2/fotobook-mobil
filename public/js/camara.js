@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
     startCamera();
 
     captureButton.addEventListener('click', () => {
-        let seconds = 1;
+        let seconds = 2;
         const captureInterval = setInterval(() => {
             if (seconds === 1) {
                 capture();
                 clearInterval(captureInterval);
             }
-            // seconds--;
-            captureButton.innerText = `!`;
+            seconds--;
+            captureButton.innerText = `${seconds}`;
         }, 1000);
     });
 
@@ -73,5 +73,3 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 });
-
-// TODO: revisar
