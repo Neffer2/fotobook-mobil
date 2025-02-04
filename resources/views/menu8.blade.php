@@ -11,7 +11,7 @@
     <div class="menu-container">
         <div class="menu">
             <a href="/camera?overlay=grupo.png" class="menu-item" id="tatan3">
-                <img src="{{ asset('assets/sub_menu/filtro/grupo.png') }}" alt="Logo" class="logo">
+                <img src="{{ asset('assets/sub_menu/filtro/grupo_menu.png') }}" alt="Logo" class="logo">
             </a>
         </div>
         <a href="{{ route('home') }}" class="button">
