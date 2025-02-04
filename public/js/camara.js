@@ -73,3 +73,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 });
+
+// Camara en producción
